@@ -66,7 +66,7 @@ const LandingPageTemplate = () => `
           <p class="text-2xl mb-8">  The ultimate platform for streamlined support, tracking, and issue
           resolution.</p>
           <div class="flex gap-4 justify-center flex-wrap">
-            <button onclick="AppState.currentPage = 'auth'; render();" class="bg-white text-indigo-600 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100 transition shadow-lg">
+            <button onclick="AppState.currentPage = 'auth'; render();" class="bg-white text-[#1D099C] px-8 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100 transition shadow-lg">
               Login
             </button>
             <button onclick="AppState.currentPage = 'auth'; render();" class="bg-indigo-800 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-indigo-900 transition shadow-lg">
@@ -87,21 +87,21 @@ const LandingPageTemplate = () => `
       <div class="grid md:grid-cols-3 gap-8">
         <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
           <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
-            <i data-lucide="check-circle" class="w-8 h-8 text-green-600"></i>
+           🔏
           </div>
           <h3 class="font-bold text-2xl mb-3">Easy Management</h3>
           <p class="text-gray-600">Create, edit, and track tickets effortlessly with our intuitive interface</p>
         </div>
         <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
           <div class="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
-            <i data-lucide="ticket" class="w-8 h-8 text-amber-600"></i>
+           🎯
           </div>
           <h3 class="font-bold text-2xl mb-3">Priority System</h3>
           <p class="text-gray-600">Organize tickets by priority and status for maximum efficiency</p>
         </div>
         <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
           <div class="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
-            <i data-lucide="alert-circle" class="w-8 h-8 text-indigo-600"></i>
+          🔄
           </div>
           <h3 class="font-bold text-2xl mb-3">Real-time Updates</h3>
           <p class="text-gray-600">Stay informed with instant notifications and status changes</p>
@@ -115,7 +115,7 @@ const LandingPageTemplate = () => `
       <div class="max-w-7xl mx-auto px-4 text-center">
         <h2 class="text-3xl font-bold text-gray-800 mb-6">Ready to Get Started?</h2>
         <p class="text-gray-600 mb-8 text-lg">Join thousands of teams managing their tickets efficiently</p>
-        <button onclick="AppState.currentPage = 'auth'; render();" class="bg-indigo-600 text-white px-10 py-4 rounded-lg text-lg font-semibold hover:bg-indigo-700 transition shadow-lg">
+        <button onclick="AppState.currentPage = 'auth'; render();" class="bg-[#1D099C] text-white px-10 py-4 rounded-lg text-lg font-semibold hover:bg-indigo-700 transition shadow-lg">
           Start Free Trial
         </button>
       </div>
@@ -132,7 +132,7 @@ const AuthPageTemplate = () => `
     <div class="flex-1 flex items-center justify-center px-4 py-12">
       <div class="bg-white rounded-2xl shadow-xl p-8 w-full max-w-md">
         <div class="text-center mb-8">
-          <i data-lucide="ticket" class="w-16 h-16 mx-auto mb-4 text-indigo-600"></i>
+          <i data-lucide="ticket" class="w-16 h-16 mx-auto mb-4 text-[#1D099C]"></i>
           <h2 class="text-3xl font-bold text-gray-800">${
             AppState.authMode === "login" ? "Welcome Back" : "Create Account"
           }</h2>
@@ -143,7 +143,7 @@ const AuthPageTemplate = () => `
               ? `
             <div class="mb-4">
               <label class="block text-gray-700 font-semibold mb-2">Name</label>
-              <input id="name" type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Your name">
+              <input id="name" type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1D099C]" placeholder="Your name">
               <p id="name-error" class="text-red-500 text-sm mt-1"></p>
             </div>
           `
@@ -151,20 +151,20 @@ const AuthPageTemplate = () => `
           }
           <div class="mb-4">
             <label class="block text-gray-700 font-semibold mb-2">Email</label>
-            <input id="email" type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="your@email.com">
+            <input id="email" type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1D099C]" placeholder="your@email.com">
             <p id="email-error" class="text-red-500 text-sm mt-1"></p>
           </div>
           <div class="mb-6">
             <label class="block text-gray-700 font-semibold mb-2">Password</label>
-            <input id="password" type="password" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="••••••••">
+            <input id="password" type="password" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1D099C]" placeholder="••••••••">
             <p id="password-error" class="text-red-500 text-sm mt-1"></p>
           </div>
-          <button onclick="Auth.handleLogin()" class="w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold hover:bg-indigo-700 transition">
+          <button onclick="Auth.handleLogin()" class="w-full bg-[#1D099C] text-white py-3 rounded-lg font-semibold hover:bg-[#1D099C] transition">
             ${AppState.authMode === "login" ? "Sign In" : "Sign Up"}
           </button>
         </div>
         <div class="mt-6 text-center">
-          <button onclick="Auth.toggleAuthMode()" class="text-indigo-600 hover:text-indigo-800 font-semibold">
+          <button onclick="Auth.toggleAuthMode()" class="text-[#1D099C] hover:text-[#1a088f] font-semibold">
             ${
               AppState.authMode === "login"
                 ? "Need an account? Sign up"
@@ -193,17 +193,16 @@ const DashboardPageTemplate = () => {
       <nav class="bg-white shadow-sm border-b">
         <div class="max-w-7xl mx-auto px-4 py-4 flex flex-wrap justify-between items-center gap-4">
           <div class="flex items-center">
-            <i data-lucide="ticket" class="w-8 h-8 text-indigo-600 mr-3"></i>
-            <span class="text-2xl font-bold text-gray-800">TicketFlow</span>
+          🎫
+            <span class="text-2xl font-bold text-gray-800 ml-3">SwiftPass</span>
           </div>
           <div class="flex items-center gap-4 flex-wrap">
             <button onclick="requireAuth('tickets')" class="flex items-center gap-2 px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition">
-              <i data-lucide="layout-dashboard" class="w-5 h-5"></i>
               Tickets
             </button>
             <span class="text-gray-700">Hello, ${AppState.user?.name}</span>
             <button onclick="Auth.handleLogout()" class="flex items-center gap-2 px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition">
-              <i data-lucide="log-out" class="w-5 h-5"></i>
+              ↩️
               Logout
             </button>
           </div>
@@ -239,8 +238,7 @@ const DashboardPageTemplate = () => {
 
         <div class="bg-white rounded-xl shadow-lg border border-gray-100 p-8 text-center">
           <h2 class="text-2xl font-bold text-gray-800 mb-4">Quick Actions</h2>
-          <button onclick="requireAuth('tickets')" class="bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition inline-flex items-center gap-2">
-            <i data-lucide="layout-dashboard" class="w-5 h-5"></i>
+          <button onclick="requireAuth('tickets')" class="bg-[#1D099C] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#1D099C]  transition inline-flex items-center gap-2">
             Manage Tickets
           </button>
         </div>
@@ -258,17 +256,16 @@ const TicketsPageTemplate = () => `
     <nav class="bg-white shadow-sm border-b">
       <div class="max-w-7xl mx-auto px-4 py-4 flex flex-wrap justify-between items-center gap-4">
         <div class="flex items-center">
-          <i data-lucide="ticket" class="w-8 h-8 text-indigo-600 mr-3"></i>
-          <span class="text-2xl font-bold text-gray-800">TicketFlow</span>
+          🎫
+          <span class="text-2xl font-bold text-gray-800 ml-3">SwiftPass</span>
         </div>
         <div class="flex items-center gap-4 flex-wrap">
           <button onclick="requireAuth('dashboard')" class="flex items-center gap-2 px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition">
-            <i data-lucide="home" class="w-5 h-5"></i>
             Dashboard
           </button>
           <span class="text-gray-700">Hello, ${AppState.user?.name}</span>
           <button onclick="Auth.handleLogout()" class="flex items-center gap-2 px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition">
-            <i data-lucide="log-out" class="w-5 h-5"></i>
+            ↩️
             Logout
           </button>
         </div>
@@ -279,8 +276,8 @@ const TicketsPageTemplate = () => `
       <div class="bg-white rounded-xl shadow-lg border border-gray-100">
         <div class="p-6 border-b flex flex-wrap justify-between items-center gap-4">
           <h2 class="text-2xl font-bold text-gray-800">All Tickets</h2>
-          <button onclick="Tickets.openModal()" class="flex items-center gap-2 bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition">
-            <i data-lucide="plus" class="w-5 h-5"></i>
+          <button onclick="Tickets.openModal()" class="flex items-center gap-2 bg-[#1D099C] text-white px-4 py-2 rounded-lg hover:bg-[#1D099C]  transition">
+           ➕
             New Ticket
           </button>
         </div>
@@ -306,7 +303,7 @@ const TicketsPageTemplate = () => `
                     <div class="flex gap-2">
                       <button onclick="Tickets.openModal('${
                         ticket.id
-                      }')" class="text-indigo-600 hover:text-indigo-800 p-2 hover:bg-indigo-50 rounded-lg transition">
+                      }')" class="text-[#1D099C] hover:text-[#1D099C] p-2 hover:bg-indigo-50 rounded-lg transition">
                         <i data-lucide="edit-2" class="w-5 h-5"></i>
                       </button>
                       <button onclick="Tickets.confirmDelete('${
@@ -364,19 +361,19 @@ const TicketsPageTemplate = () => `
               <label class="block text-gray-700 font-semibold mb-2">Title *</label>
               <input id="ticket-title" type="text" value="${
                 AppState.editingTicket?.title || ""
-              }" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Enter ticket title">
+              }" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1D099C]" placeholder="Enter ticket title">
               <p id="title-error" class="text-red-500 text-sm mt-1"></p>
             </div>
             <div class="mb-4">
               <label class="block text-gray-700 font-semibold mb-2">Description</label>
-              <textarea id="ticket-description" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" rows="4" placeholder="Enter ticket description">${
+              <textarea id="ticket-description" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1D099C]" rows="4" placeholder="Enter ticket description">${
                 AppState.editingTicket?.description || ""
               }</textarea>
               <p id="description-error" class="text-red-500 text-sm mt-1"></p>
             </div>
             <div class="mb-4">
               <label class="block text-gray-700 font-semibold mb-2">Priority</label>
-              <select id="ticket-priority" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+              <select id="ticket-priority" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1D099C]">
                 <option value="low" ${
                   AppState.editingTicket?.priority === "low" ? "selected" : ""
                 }>Low</option>
@@ -393,7 +390,7 @@ const TicketsPageTemplate = () => `
             </div>
             <div class="mb-6">
               <label class="block text-gray-700 font-semibold mb-2">Status *</label>
-              <select id="ticket-status" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+              <select id="ticket-status" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1D099C]">
                 <option value="open" ${
                   !AppState.editingTicket ||
                   AppState.editingTicket?.status === "open"
@@ -412,7 +409,7 @@ const TicketsPageTemplate = () => `
               <p id="status-error" class="text-red-500 text-sm mt-1"></p>
             </div>
             <div class="flex gap-3">
-              <button onclick="Tickets.handleTicketSubmit()" class="flex-1 bg-indigo-600 text-white py-3 rounded-lg font-semibold hover:bg-indigo-700 transition">
+              <button onclick="Tickets.handleTicketSubmit()" class="flex-1 bg-[#1D099C] text-white py-3 rounded-lg font-semibold hover:bg-[#1D099C] transition">
                 ${AppState.editingTicket ? "Update" : "Create"}
               </button>
               <button onclick="Tickets.closeModal()" class="flex-1 bg-gray-200 text-gray-800 py-3 rounded-lg font-semibold hover:bg-gray-300 transition">

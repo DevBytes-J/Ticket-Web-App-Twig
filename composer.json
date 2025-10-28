@@ -1,0 +1,8 @@
+{
+  "name": "michaelbassey/ticket-web-app-twig",
+  "description": "TicketFlow — simple ticket web app using Twig",
+  "license": "proprietary",
+  "require": {
+    "twig/twig": "^3.21"
+  }
+}

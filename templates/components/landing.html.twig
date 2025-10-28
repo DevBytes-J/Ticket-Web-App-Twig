@@ -1,0 +1,46 @@
+const LandingPageTemplate = () => `
+  <div class="min-h-screen flex flex-col">
+    ${HeroTemplate()}
+    
+    <div class="max-w-7xl mx-auto px-4 py-16">
+      <h2 class="text-4xl font-bold text-gray-800 mb-12 text-center">Why Choose TicketFlow?</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+          <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+            <i data-lucide="check-circle" class="w-8 h-8 text-green-600"></i>
+          </div>
+          <h3 class="font-bold text-2xl mb-3">Easy Management</h3>
+          <p class="text-gray-600">Create, edit, and track tickets effortlessly with our intuitive interface</p>
+        </div>
+        <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+          <div class="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+            <i data-lucide="ticket" class="w-8 h-8 text-amber-600"></i>
+          </div>
+          <h3 class="font-bold text-2xl mb-3">Priority System</h3>
+          <p class="text-gray-600">Organize tickets by priority and status for maximum efficiency</p>
+        </div>
+        <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+          <div class="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+            <i data-lucide="alert-circle" class="w-8 h-8 text-indigo-600"></i>
+          </div>
+          <h3 class="font-bold text-2xl mb-3">Real-time Updates</h3>
+          <p class="text-gray-600">Stay informed with instant notifications and status changes</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="relative py-16 bg-gray-50">
+      <div class="absolute top-10 right-20 w-32 h-32 bg-indigo-200 opacity-30 rounded-full"></div>
+      <div class="max-w-7xl mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">Ready to Get Started?</h2>
+        <p class="text-gray-600 mb-8 text-lg">Join thousands of teams managing their tickets efficiently</p>
+        <button onclick="AppState.currentPage = 'auth'; render();" class="bg-indigo-600 text-white px-10 py-4 rounded-lg text-lg font-semibold hover:bg-indigo-700 transition shadow-lg">
+          Start Free Trial
+        </button>
+      </div>
+    </div>
+
+    ${FooterTemplate()}
+    ${ToastTemplate()}
+  </div>
+`;

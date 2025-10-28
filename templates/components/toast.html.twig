@@ -1,0 +1,9 @@
+const ToastTemplate = () => {
+  if (!AppState.toast.show) return '';
+  return `
+    <div class="fixed top-4 right-4 z-50 px-6 py-4 rounded-lg shadow-lg ${AppState.toast.type === 'success' ? 'bg-green-500' : 'bg-red-500'} text-white flex items-center gap-3">
+      <i data-lucide="${AppState.toast.type === 'success' ? 'check-circle' : 'alert-circle'}" class="w-5 h-5"></i>
+      <span>${AppState.toast.message}</span>
+    </div>
+  `;
+};
